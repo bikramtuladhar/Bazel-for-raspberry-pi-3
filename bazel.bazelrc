@@ -1,0 +1,8 @@
+common --color=yes
+test --test_output=errors
+build --verbose_failures
+build --stamp
+build --workspace_status_command=scripts/ci/build_status_command.sh
+build --embed_label 0.8.1
+build --experimental_build_event_json_file=bazel-events-build.json
+test --experimental_build_event_json_file=bazel-events-test.json
